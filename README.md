@@ -105,22 +105,24 @@ To run tests, run the following command:
 <!-- AUTHORS -->
 
 ## 🙎‍♂️ Authors <a name="authors"></a>
-:bust_in_silhouette: **Author1**
- *[HERMON GEBRE]*
+### 👤 **[HERMON GEBRE]**
 - GitHub: [@githubhandle](https://github.com/HERMON-1995)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hermon-gebre/)
-:bust_in_silhouette: **Author1**
- *[]*
-- GitHub: [@githubhandle]()
-- LinkedIn: [LinkedIn]()
-:bust_in_silhouette: **Author1**
- *[]*
-- GitHub: [@githubhandle]()
-- LinkedIn: [LinkedIn]()
-:bust_in_silhouette: **Author1**
- *[]*
-- GitHub: [@githubhandle]()
-- LinkedIn: [LinkedIn]()
+
+### 👤 **[THEOPHILUS DOKU]**
+- GitHub: [@githubhandle](https://github.com/theodoku)
+- Twitter: [@twitterhandle](https://twitter.com/dok_theo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/theophilus-doku/)
+
+### 👤 **[SHAFIU IBN YUSHAWU]**
+- GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu)
+- Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
+- LinkedIn: [shafiuyushawu](https://www.linkedin.com/in/shafiuyushawu/)
+
+### 👤 **[Emmanuel Obi]**
+
+- GitHub: [@githubhandle](https://github.com/Gmanlove)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuelgozieobi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,16 +168,3 @@ This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-GitHubGitHub
-GitHub - HERMON-1995/Book_vehicle_rental-frontend
-Contribute to HERMON-1995/Book_vehicle_rental-frontend development by creating an account on GitHub. (131 kB)
-https://github.com/HERMON-1995/Book_vehicle_rental-frontend/tree/development
-
-rubyonrails.orgrubyonrails.org
-Ruby on Rails
-A web-app framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern. (16 kB)
-https://rubyonrails.org/
-
-GitHubGitHub
-HERMON-1995 - Overview
-Full-Stack Web Developer, creative, problem-solver, strong interpersonal skills. Stack: JavaScript, Node | Bootstrap | Ruby | React. Pursuing new opportunities - HERMON-1995
