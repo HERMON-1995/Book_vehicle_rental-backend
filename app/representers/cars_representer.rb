@@ -6,7 +6,8 @@ class CarsRepresenter
   def as_json
     cars.map do |car|
       {
-        user_id: car.id,
+        id: car.id,
+        user_id: car.user_id,
         name: car.name,
         description: car.description,
         photo: car.photo,
