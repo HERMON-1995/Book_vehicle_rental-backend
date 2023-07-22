@@ -13,7 +13,7 @@ class CarsRepresenter
         photo: car.photo,
         price: car.price,
         model: car.model,
-        user: car.user.username,
+        user: car.user.present? ? car.user.username : nil,
         date_added: car.created_at
       }
     end

@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_193554) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "specifications", default: "[]"
+    t.text "features", default: "[]"
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
@@ -46,6 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_193554) do
   end
 
   add_foreign_key "cars", "users"
+  add_foreign_key "reservations", "cars"
+  add_foreign_key "reservations", "users"
   add_foreign_key "reservations", "cars"
   add_foreign_key "reservations", "users"
 end
