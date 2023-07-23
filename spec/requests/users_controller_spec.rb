@@ -10,7 +10,6 @@ RSpec.describe 'Api::V1::UsersController', type: :request do
 
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq('application/json; charset=utf-8')
-
       end
     end
 

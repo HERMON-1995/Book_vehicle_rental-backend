@@ -36,7 +36,7 @@ RSpec.describe Api::V1::AuthenticationController, type: :controller do
         expect(response).to have_http_status(:unprocessable_entity)
 
         error_response = JSON.parse(response.body)
-        expect(error_response['error']).to eq("param is missing or the value is empty: username")
+        expect(error_response['error']).to eq('param is missing or the value is empty: username')
       end
     end
 
@@ -49,7 +49,7 @@ RSpec.describe Api::V1::AuthenticationController, type: :controller do
         expect(response).to have_http_status(:unprocessable_entity)
 
         error_response = JSON.parse(response.body)
-        expect(error_response['error']).to eq("param is missing or the value is empty: password")
+        expect(error_response['error']).to eq('param is missing or the value is empty: password')
       end
     end
   end

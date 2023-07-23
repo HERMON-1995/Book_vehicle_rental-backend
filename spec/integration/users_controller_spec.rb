@@ -13,9 +13,9 @@ RSpec.describe 'Api::V1::UsersController', type: :request do
       end
 
       it 'creates a new user' do
-        expect {
+        expect do
           post '/api/v1/users', params: valid_params
-        }.to change(User, :count).by(1)
+        end.to change(User, :count).by(1)
 
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq('application/json; charset=utf-8')

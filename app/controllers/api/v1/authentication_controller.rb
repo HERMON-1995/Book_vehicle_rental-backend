@@ -4,7 +4,7 @@ module Api
       rescue_from ActionController::ParameterMissing, with: :parameter_missing
 
       def create
-        if user && user.authenticate(params.require(:password))
+        if user&.authenticate(params.require(:password))
           render json: UserRepresenter.new(user).as_json, status: :created
         else
           render json: { error: 'No such user; check the submitted username' }, status: :unauthorized

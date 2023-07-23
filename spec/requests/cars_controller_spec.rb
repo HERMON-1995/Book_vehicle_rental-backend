@@ -3,33 +3,33 @@ require 'rails_helper'
 
 RSpec.describe 'Api::V1::CarsController', type: :request do
   describe 'GET #index' do
-  it 'returns a successful response with all cars' do
-    cars = create_list(:car, 3)
-    
-    get '/api/v1/cars'
-    
-    expect(response).to have_http_status(:ok)
-    expect(response.content_type).to include('application/json')
-    
-    # Compare the JSON response with the expected JSON representation of the cars
-    expect(response.body).to eq(CarsRepresenter.new(cars).as_json.to_json)
-  end
-end
+    it 'returns a successful response with all cars' do
+      cars = create_list(:car, 3)
 
-  describe "POST #create with valid parameters" do
+      get '/api/v1/cars'
+
+      expect(response).to have_http_status(:ok)
+      expect(response.content_type).to include('application/json')
+
+      # Compare the JSON response with the expected JSON representation of the cars
+      expect(response.body).to eq(CarsRepresenter.new(cars).as_json.to_json)
+    end
+  end
+
+  describe 'POST #create with valid parameters' do
     let(:valid_attributes) do
       {
-        name: "Car Name",
-        description: "Car Description",
-        photo: "car.jpg",
-        price: 10000,
-        model: "Car Model",
+        name: 'Car Name',
+        description: 'Car Description',
+        photo: 'car.jpg',
+        price: 10_000,
+        model: 'Car Model',
         user_id: create(:user).id
       }
     end
 
-    it "creates a new car" do
-      post "/api/v1/cars", params: valid_attributes
+    it 'creates a new car' do
+      post '/api/v1/cars', params: valid_attributes
       expect(response).to have_http_status(:created)
     end
   end
@@ -45,12 +45,12 @@ end
   describe 'GET #index' do
     it 'returns a successful response with all cars' do
       cars = create_list(:car, 3)
-      
+
       get '/api/v1/cars'
-      
+
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to include('application/json')
-      
+
       # Compare the JSON response with the expected JSON representation of the cars
       expect(response.body).to eq(CarsRepresenter.new(cars).as_json.to_json)
     end
@@ -80,7 +80,7 @@ end
     end
 
     it 'returns not_found status for a non-existent car' do
-      delete "/api/v1/cars/999"
+      delete '/api/v1/cars/999'
 
       expect(response).to have_http_status(:not_found)
     end
