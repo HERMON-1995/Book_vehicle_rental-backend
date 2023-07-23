@@ -1,10 +1,11 @@
+# app/representers/cars_representer.rb
 class CarsRepresenter
   def initialize(cars)
     @cars = cars
   end
 
   def as_json
-    cars.map do |car|
+    @cars.map do |car|
       {
         id: car.id,
         user_id: car.user_id,
@@ -12,14 +13,8 @@ class CarsRepresenter
         description: car.description,
         photo: car.photo,
         price: car.price,
-        model: car.model,
-        user: car.user.present? ? car.user.username : nil,
-        date_added: car.created_at
+        model: car.model
       }
     end
   end
-
-  private
-
-  attr_reader :cars
 end
