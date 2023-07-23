@@ -5,10 +5,3 @@ FactoryBot.define do
     return_date { '2023-07-20' }
   end
 end
-FactoryBot.define do
-  factory :reservation do
-    city { 'MyString' }
-    reservation_date { '2023-07-20' }
-    returned_date { '2023-07-20' }
-  end
-end
