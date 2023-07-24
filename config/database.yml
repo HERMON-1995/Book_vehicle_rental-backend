@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   username: postgres
-  password: Grahhs1995family
+  password: Soccer
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
