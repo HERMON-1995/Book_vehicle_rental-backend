@@ -31,8 +31,15 @@ module Api
 
       # DELETE /cars/:id
       def destroy
-        @car.destroy
-        head :no_content
+        @car = Car.find(params[:id])
+        if @car.destroy
+          render json: { 
+            id: @car.id, 
+            msg: 'Car deleted successfully' 
+          }, status: :ok
+        else
+          render json: { error: 'Something went wrong' }, status: :bad_request
+        end
       end
 
       private
