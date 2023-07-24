@@ -24,16 +24,20 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def destroy
-    reservation = Reservation.find(params[:id])
+    reservation = Reservation.find_by(id: params[:id])
 
-    if reservation.destroy
-      render json: {
-        status: 200,
-        message: 'Reservation cancelled',
-        data: reservation
-      }, status: :ok
+    if reservation
+      if reservation.destroy
+        render json: {
+          status: 200,
+          message: 'Reservation cancelled',
+          data: reservation
+        }, status: :ok
+      else
+        render json: { error: 'ERROR: Unable to cancel the reservation' }, status: :unprocessable_entity
+      end
     else
-      render json: { error: 'ERROR: Unable to cancel the reservation' }, status: :unprocessable_entity
+      render json: { error: 'Reservation not found' }, status: :unprocessable_entity
     end
   end
 

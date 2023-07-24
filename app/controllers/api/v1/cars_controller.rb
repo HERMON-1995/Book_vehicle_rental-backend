@@ -10,7 +10,7 @@ module Api
 
       # POST /car
       def create
-        @car = Car.create(car_params)
+        @car = Car.new(car_params)
         if @car.save
           render json: CarRepresenter.new(@car).as_json, status: :created
         else
@@ -20,7 +20,11 @@ module Api
 
       # GET /cars/:id
       def show
-        render json: CarRepresenter.new(@car).as_json
+        if @car
+          render json: CarRepresenter.new(@car).as_json, status: :ok
+        else
+          render json: { error: 'Car not found' }, status: :not_found
+        end
       end
 
       # PUT /cars/:id
