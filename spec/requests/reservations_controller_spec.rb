@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ReservationsController, type: :controller do
-  describe "GET #index" do
-    it "returns a list of reservations in descending order of ID" do
+  describe 'GET #index' do
+    it 'returns a list of reservations in descending order of ID' do
       # Create some test reservations with different IDs
       reservation1 = create(:reservation)
       reservation2 = create(:reservation)
@@ -22,9 +22,9 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
     end
   end
 
-  describe "POST #create" do
-    context "with valid parameters" do
-      it "creates a new reservation" do
+  describe 'POST #create' do
+    context 'with valid parameters' do
+      it 'creates a new reservation' do
         user = create(:user)
         car = create(:car)
 
@@ -56,8 +56,8 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
       end
     end
 
-    context "with invalid parameters" do
-      it "returns an error message" do
+    context 'with invalid parameters' do
+      it 'returns an error message' do
         # Parameters with missing required fields
         invalid_params = {
           city: 'Test City',
@@ -82,8 +82,8 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
     end
   end
 
-  describe "DELETE #destroy" do
-    it "destroys a reservation" do
+  describe 'DELETE #destroy' do
+    it 'destroys a reservation' do
       # Create a test reservation
       reservation = create(:reservation)
 
@@ -105,7 +105,7 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
       expect(Reservation.count).to eq(0)
     end
 
-    it "returns an error message for invalid reservation ID" do
+    it 'returns an error message for invalid reservation ID' do
       # Make a DELETE request to the destroy action with an invalid reservation ID
       delete :destroy, params: { id: 999 }
 
@@ -116,7 +116,7 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
       json_response = JSON.parse(response.body)
 
       # Expect the response to contain the error message
-      expect(json_response['error']).to eq("Reservation not found")
+      expect(json_response['error']).to eq('Reservation not found')
 
       # Expect no reservation to be destroyed in the database
       expect(Reservation.count).to eq(0)

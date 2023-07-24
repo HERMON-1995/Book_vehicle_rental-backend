@@ -10,7 +10,7 @@ class Reservation < ApplicationRecord
 
   # Define the scopes
   scope :recent, -> { order(created_at: :desc) }
-  scope :by_city, -> (city) { where(city: city) }
+  scope :by_city, ->(city) { where(city:) }
 
   def total_cost
     # Calculate the duration of the reservation in days
