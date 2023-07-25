@@ -51,3 +51,10 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 5.0'
 end
+# Gemfile
+gem 'rswag-api'
+gem 'rswag-ui'
+
+group :development, :test do
+  gem 'rswag-specs'
+end
