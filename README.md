@@ -28,6 +28,10 @@
 
 ## [Link to the front-end repo](https://github.com/HERMON-1995/Book_vehicle_rental-frontend/tree/development)
 
+Below is the link to the database diagram
+
+<img src="app/images/Vehicle appointment database image 2.jpg" alt="Vehicle appointment diagram" />
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
