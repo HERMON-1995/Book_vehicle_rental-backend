@@ -1,3 +1,5 @@
+User.create!(username: 'shafiu', password: '12345678')
+
 Car.create!(
   name: 'Lamborghini Huracán',
   description: 'Italian luxury sports car manufacturer known for producing high-performance, exotic, and visually striking automobiles, characterized by their aggressive styling.',
