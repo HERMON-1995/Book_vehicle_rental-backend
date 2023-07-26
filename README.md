@@ -155,7 +155,7 @@ If you like this project please show support by staring :star:️.
 
 ## 🙏Acknowledgments <a name="acknowledgements"></a>
 
-* WE would like to give Microverse our sincerest gratitude for accommodating us in the Full-time Software Development program.
+* WE would like to give Microverse our sincerest gratitude for accommodating us in the Full-time Software Development program.Thanks
 * We would like to extend our sincerest gratitude for [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for this beautiful design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
