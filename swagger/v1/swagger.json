@@ -1,0 +1,153 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API V1",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/authentication": {
+      "post": {
+        "summary": "Authenticates a user",
+        "tags": [
+          "Authentication"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "201": {
+            "description": "Created"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username",
+                  "password"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cars": {
+      "post": {
+        "summary": "Creates a car",
+        "tags": [
+          "Cars"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "model": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "photo": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "user",
+                  "name",
+                  "model",
+                  "description",
+                  "photo"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/reservations": {
+      "post": {
+        "summary": "Creates a reservation",
+        "tags": [
+          "Reservations"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string"
+                  },
+                  "time": {
+                    "type": "string"
+                  },
+                  "duration": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "city",
+                  "date",
+                  "time",
+                  "duration"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001/api-docs",
+      "variables": {
+        "defaultHost": {
+          "default": "www.example.com"
+        }
+      }
+    }
+  ]
+}
