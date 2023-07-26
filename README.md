@@ -101,7 +101,9 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  rubocop --color
+  rspec ./spec/controllers
+  rspec ./spec/requests
+  rspec ./spec/model
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
