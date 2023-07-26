@@ -9,7 +9,7 @@ Rswag::Ui.configure do |c|
   # correspond to the relative paths for those endpoints.
 
 
-  c.SwaggerEndpoint("./v1/swagger.json", "My API V1");
+  c.swagger_endpoint './v1/swagger.json', 'My API V1'
 
   # Add Basic Auth in case your API is private
   # c.basic_auth_enabled = true
