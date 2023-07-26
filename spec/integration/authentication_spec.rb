@@ -21,7 +21,7 @@ describe 'Authentication API', swagger_doc: 'v1/swagger.json' do
           username: { type: :string },
           password: { type: :string }
         },
-        required: ['username', 'password']
+        required: %w[username password]
       }
 
       response '401', 'Unauthorized' do

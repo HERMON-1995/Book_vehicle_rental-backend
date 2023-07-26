@@ -15,7 +15,7 @@ describe 'Cars API', swagger_doc: 'v1/swagger.json' do
           description: { type: :string },
           photo: { type: :string }
         },
-        required: ['user', 'name', 'model', 'description', 'photo']
+        required: %w[user name model description photo]
       }
 
       response '422', 'Unprocessable Entity' do

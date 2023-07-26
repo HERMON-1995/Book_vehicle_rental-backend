@@ -14,13 +14,13 @@ describe 'Reservations API', swagger_doc: 'v1/swagger.json' do
           time: { type: :string },
           duration: { type: :integer }
         },
-        required: ['city', 'date', 'time', 'duration']
+        required: %w[city date time duration]
       }
 
       response '400', 'Bad Request' do
         let(:reservation) { { city: '', date: '2023-07-23', time: '09:00', duration: 2 } }
         run_test! do |response|
-          expect(response.body).to match("{\"error\":\"Something went wrong\"}")
+          expect(response.body).to match('{"error":"Something went wrong"}')
         end
       end
     end
