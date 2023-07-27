@@ -26,7 +26,7 @@
 
 **[Book vehicle rental backend]** is a backend rails api that provides service to the front-end react app to fetch data for vehile rentals.
 
-## [Link to the front-end repo](https://github.com/HERMON-1995/Book_vehicle_rental-frontend/tree/development)
+## [Link to the front-end repo](https://github.com/HERMON-1995/book_vehicle_rental-frontend)
 
 Below is the link to the database diagram
 
