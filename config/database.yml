@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: shafiu
+  password: Soccer
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: Book_vehicle_rental_development
+
+test:
+  <<: *default
+  database: Book_vehicle_rental_test
+
+production:
+  <<: *default
+  database: Book_vehicle_rental_production
